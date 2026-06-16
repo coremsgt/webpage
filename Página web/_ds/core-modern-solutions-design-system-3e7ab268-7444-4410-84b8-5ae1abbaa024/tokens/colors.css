@@ -1,0 +1,90 @@
+/* ============================================================
+   Core Modern Solutions — Color tokens
+   Four energies (Blue primary; Green / Gold / Red accents) +
+   neutral spine. Each family has Bright / Mid / Dark depths.
+   ============================================================ */
+:root {
+  /* ---- PRIMARY · Blue — authority, vision, trust ---- */
+  --blue-bright: #0049E5;   /* CTAs, links, primary actions */
+  --blue-mid:    #152B5B;   /* hover, titles on dark */
+  --blue-dark:   #03102B;   /* backgrounds, headers */
+
+  /* ---- ACCENT · Green — growth, success, results ---- */
+  --green-bright: #328200;
+  --green-mid:    #213E0F;
+  --green-dark:   #0A1802;
+
+  /* ---- ACCENT · Gold — premium, value, attention ---- */
+  --gold-bright: #FFDB29;
+  --gold-mid:    #BAA22C;
+  --gold-dark:   #766409;
+
+  /* ---- ACCENT · Red — urgency, alert, action ---- */
+  --red-bright: #FF2929;
+  --red-mid:    #BA2C2C;
+  --red-dark:   #470606;
+
+  /* ---- NEUTRALS · the invisible spine ---- */
+  --n-900: #161616;  /* near-black — primary text, headings */
+  --n-700: #303030;  /* dark gray — body text */
+  --n-500: #636363;  /* mid gray — placeholders, dividers */
+  --n-300: #969696;  /* light gray — captions, disabled */
+  --n-100: #E0E0E0;  /* pale gray — borders, hairlines */
+  --n-50:  #F0F0F0;  /* near-white — surfaces */
+  --white: #FFFFFF;
+  --canvas-dark: #0A0A0A; /* digital dark canvas */
+
+  /* ---- SYSTEM GRADIENTS (premium use only) ---- */
+  --grad-blue:  linear-gradient(145deg, #0049E6 0%, #152B5B 52%, #03102B 100%); /* @kind color */
+  --grad-green: linear-gradient(180deg, #328200 0%, #213E0F 52%, #0A1802 100%); /* @kind color */
+  --grad-gold:  linear-gradient(180deg, #FFDB29 0%, #BAA22C 52%, #766409 100%); /* @kind color */
+  --grad-red:   linear-gradient(180deg, #FF2929 0%, #BA2C2C 52%, #470606 100%); /* @kind color */
+
+  /* ============================================================
+     SEMANTIC ALIASES — light mode (proposals, documents)
+     ============================================================ */
+  --color-accent:        var(--blue-bright);
+  --color-accent-hover:  var(--blue-mid);
+
+  --text-primary:    var(--n-900);
+  --text-body:       var(--n-700);
+  --text-muted:      var(--n-500);
+  --text-disabled:   var(--n-300);
+  --text-on-accent:  var(--white);
+  --text-link:       var(--blue-bright);
+
+  --surface-page:    var(--white);
+  --surface-card:    var(--white);
+  --surface-subtle:  var(--n-50);
+  --surface-inverse: var(--blue-dark);
+
+  --border-subtle:   var(--n-100);
+  --border-strong:   var(--n-300);
+  --border-focus:    var(--blue-bright);
+
+  /* status */
+  --status-success:  var(--green-bright);
+  --status-warning:  var(--gold-mid);
+  --status-danger:   var(--red-bright);
+  --status-info:     var(--blue-bright);
+}
+
+/* ============================================================
+   DARK MODE (presentations, digital, hero surfaces)
+   Apply on a container:  <div class="core-dark"> … </div>
+   ============================================================ */
+.core-dark {
+  --text-primary:    var(--white);
+  --text-body:       var(--n-300);
+  --text-muted:      var(--n-500);
+  --text-disabled:   var(--n-500);
+  --text-link:       #4D85FF;
+
+  --surface-page:    var(--canvas-dark);
+  --surface-card:    rgba(255,255,255,0.02);
+  --surface-subtle:  rgba(255,255,255,0.04);
+  --surface-inverse: var(--white);
+
+  --border-subtle:   rgba(255,255,255,0.06);
+  --border-strong:   rgba(255,255,255,0.14);
+}
